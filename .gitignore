@@ -34,9 +34,8 @@ checkpoint-*/
 # --- Local copies downloaded from Colab / Drive
 # Duplicate of capstone-absa-colab-v4/results/
 /capstone-absa-colab-v4-results/
-# Executed Colab notebook: its outputs print raw Amazon review text,
-# and every metric it produced is already saved in results/.
-/colab_run_v4.ipynb
+# colab_run_v4.ipynb (the executed Colab run log) IS committed, but only after
+# its diagnostic cell's output is cleared: that cell prints raw review sentences.
 
 # --- Secrets and credentials
 .env
