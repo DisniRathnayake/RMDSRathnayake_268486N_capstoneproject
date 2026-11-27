@@ -1,0 +1,56 @@
+{
+  "method": "finetuned",
+  "n": 1025,
+  "json_validity_rate": 0.9980487804878049,
+  "seconds_per_review": 4.170569434282256,
+  "metrics": {
+    "aspect_exact": {
+      "precision": 0.83359375,
+      "recall": 0.8169984686064319,
+      "f1": 0.8252126836813612
+    },
+    "aspect_relaxed": {
+      "precision": 0.884375,
+      "recall": 0.8667687595712098,
+      "f1": 0.8754833720030936
+    },
+    "pair_exact": {
+      "precision": 0.75859375,
+      "recall": 0.7434915773353752,
+      "f1": 0.7509667440061872
+    },
+    "pair_relaxed": {
+      "precision": 0.80390625,
+      "recall": 0.7879019908116386,
+      "f1": 0.7958236658932715
+    }
+  },
+  "metrics_strict_all": {
+    "aspect_exact": {
+      "precision": 0.83359375,
+      "recall": 0.8138825324180016,
+      "f1": 0.8236202238517947
+    },
+    "aspect_relaxed": {
+      "precision": 0.884375,
+      "recall": 0.8634630053394355,
+      "f1": 0.873793901968352
+    },
+    "pair_exact": {
+      "precision": 0.75859375,
+      "recall": 0.7406559877955758,
+      "f1": 0.7495175607873408
+    },
+    "pair_relaxed": {
+      "precision": 0.80390625,
+      "recall": 0.7848970251716247,
+      "f1": 0.794287919722115
+    }
+  },
+  "metrics_scope_note": "metrics = valid outputs only; metrics_strict_all = all sentences",
+  "pair_exact_f1_ci": [
+    0.7509667440061872,
+    0.7252336448598131,
+    0.7728731942215089
+  ]
+}

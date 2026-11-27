@@ -1,0 +1,218 @@
+{
+  "method": "finetuned",
+  "domain": "clothing",
+  "gold_reviews": 300,
+  "sentence_json_validity_rate": 0.9975550122249389,
+  "seconds_per_review": 11.82744066953659,
+  "level_of_primary_metrics": "category (canonical aspect categories, one label per category per review)",
+  "metrics": {
+    "aspect_exact": {
+      "precision": 0.48773448773448774,
+      "recall": 0.40969696969696967,
+      "f1": 0.44532279314888007
+    },
+    "aspect_relaxed": {
+      "precision": 0.5079365079365079,
+      "recall": 0.4266666666666667,
+      "f1": 0.463768115942029
+    },
+    "pair_exact": {
+      "precision": 0.4314574314574315,
+      "recall": 0.3624242424242424,
+      "f1": 0.393939393939394
+    },
+    "pair_relaxed": {
+      "precision": 0.45165945165945165,
+      "recall": 0.3793939393939394,
+      "f1": 0.41238471673254284
+    }
+  },
+  "metrics_strict_all": {
+    "aspect_exact": {
+      "precision": 0.48637015781922527,
+      "recall": 0.4069627851140456,
+      "f1": 0.4431372549019608
+    },
+    "aspect_relaxed": {
+      "precision": 0.5064562410329986,
+      "recall": 0.4237695078031212,
+      "f1": 0.461437908496732
+    },
+    "pair_exact": {
+      "precision": 0.42898134863701576,
+      "recall": 0.3589435774309724,
+      "f1": 0.3908496732026143
+    },
+    "pair_relaxed": {
+      "precision": 0.4490674318507891,
+      "recall": 0.375750300120048,
+      "f1": 0.4091503267973856
+    }
+  },
+  "scored_reviews": 297,
+  "excluded_reviews": 3,
+  "pair_exact_f1_ci": [
+    0.393939393939394,
+    0.36233766233766235,
+    0.4258150365934797
+  ],
+  "aspect_exact_f1_ci": [
+    0.44532279314888007,
+    0.4133697135061391,
+    0.4787096774193548
+  ],
+  "agreement": {
+    "min_gold_mentions": 10,
+    "categories_in_gold": 11,
+    "categories_found_by_system": 11,
+    "net_sentiment_pearson": 0.5261829615508489,
+    "net_sentiment_spearman": 0.6000000000000001,
+    "mention_count_spearman": 0.8100707708367099,
+    "table": [
+      {
+        "category": "color",
+        "gold_mentions": 30,
+        "gold_net": 0.3,
+        "sys_mentions": 25,
+        "sys_net": 0.36
+      },
+      {
+        "category": "comfort",
+        "gold_mentions": 66,
+        "gold_net": 0.3181818181818182,
+        "sys_mentions": 12,
+        "sys_net": 0.08333333333333333
+      },
+      {
+        "category": "durability",
+        "gold_mentions": 22,
+        "gold_net": -0.3181818181818182,
+        "sys_mentions": 7,
+        "sys_net": 0.2857142857142857
+      },
+      {
+        "category": "fit",
+        "gold_mentions": 94,
+        "gold_net": 0.2127659574468085,
+        "sys_mentions": 47,
+        "sys_net": 0.5106382978723404
+      },
+      {
+        "category": "length",
+        "gold_mentions": 15,
+        "gold_net": -0.4,
+        "sys_mentions": 7,
+        "sys_net": 0.14285714285714285
+      },
+      {
+        "category": "material",
+        "gold_mentions": 76,
+        "gold_net": 0.10526315789473684,
+        "sys_mentions": 64,
+        "sys_net": 0.046875
+      },
+      {
+        "category": "price",
+        "gold_mentions": 30,
+        "gold_net": -0.03333333333333333,
+        "sys_mentions": 22,
+        "sys_net": 0.3181818181818182
+      },
+      {
+        "category": "quality",
+        "gold_mentions": 57,
+        "gold_net": -0.08771929824561403,
+        "sys_mentions": 27,
+        "sys_net": -0.1111111111111111
+      },
+      {
+        "category": "size",
+        "gold_mentions": 56,
+        "gold_net": -0.6071428571428571,
+        "sys_mentions": 34,
+        "sys_net": -0.11764705882352941
+      },
+      {
+        "category": "stretch",
+        "gold_mentions": 17,
+        "gold_net": -0.11764705882352941,
+        "sys_mentions": 10,
+        "sys_net": -0.5
+      },
+      {
+        "category": "style",
+        "gold_mentions": 94,
+        "gold_net": 0.48936170212765956,
+        "sys_mentions": 31,
+        "sys_net": 0.6774193548387096
+      }
+    ]
+  },
+  "gold_aspects": 835,
+  "gold_literal_span_share": 0.5233532934131736,
+  "gold_literal_whole_word_share": 0.39880239520958083,
+  "metrics_span_literal_gold": {
+    "aspect_exact": {
+      "precision": 0.32,
+      "recall": 0.5308924485125858,
+      "f1": 0.3993115318416523
+    },
+    "aspect_relaxed": {
+      "precision": 0.35586206896551725,
+      "recall": 0.5903890160183066,
+      "f1": 0.4440619621342513
+    },
+    "pair_exact": {
+      "precision": 0.28413793103448276,
+      "recall": 0.47139588100686497,
+      "f1": 0.35456110154905335
+    },
+    "pair_relaxed": {
+      "precision": 0.31862068965517243,
+      "recall": 0.528604118993135,
+      "f1": 0.39759036144578314
+    }
+  },
+  "avg_predictions_per_review": 2.4166666666666665,
+  "prediction_mapping_routes": {
+    "aspect_term": 296,
+    "fallback": 317,
+    "generic_unmapped": 50,
+    "head_term": 38,
+    "reason_term": 24
+  },
+  "gold_mapping_routes": {
+    "aspect_term": 685,
+    "fallback": 144,
+    "head_term": 4,
+    "generic_unmapped": 2
+  },
+  "cross_domain_drop_span": {
+    "aspect_exact": {
+      "in_domain": 0.8252126836813612,
+      "target": 0.3993115318416523,
+      "abs_drop": 0.42590115183970895,
+      "rel_drop": 0.5161107678807344
+    },
+    "pair_exact": {
+      "in_domain": 0.7509667440061872,
+      "target": 0.35456110154905335,
+      "abs_drop": 0.3964056424571339,
+      "rel_drop": 0.527860448709654
+    }
+  },
+  "cross_domain_drop_category_informational": {
+    "aspect_exact": {
+      "in_domain": 0.8252126836813612,
+      "target": 0.44532279314888007,
+      "abs_drop": 0.3798898905324812,
+      "rel_drop": 0.4603539160810666
+    },
+    "pair_exact": {
+      "in_domain": 0.7509667440061872,
+      "target": 0.393939393939394,
+      "abs_drop": 0.35702735006679326,
+      "rel_drop": 0.47542364947102334
+    }
+  }
+}

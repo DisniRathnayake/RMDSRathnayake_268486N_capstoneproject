@@ -1,0 +1,108 @@
+{
+  "detokenisation_and_dedup": {
+    "laptops_train": {
+      "sentences": 906,
+      "sentences_changed_by_detok": 898,
+      "aspect_entries_raw": 1460,
+      "aspect_entries_dedup": 1272
+    },
+    "laptops_dev": {
+      "sentences": 219,
+      "sentences_changed_by_detok": 218,
+      "aspect_entries_raw": 346,
+      "aspect_entries_dedup": 294
+    },
+    "laptops_test": {
+      "sentences": 328,
+      "sentences_changed_by_detok": 323,
+      "aspect_entries_raw": 543,
+      "aspect_entries_dedup": 463
+    },
+    "restaurants_train": {
+      "sentences": 1266,
+      "sentences_changed_by_detok": 1263,
+      "aspect_entries_raw": 2338,
+      "aspect_entries_dedup": 2044
+    },
+    "restaurants_dev": {
+      "sentences": 310,
+      "sentences_changed_by_detok": 307,
+      "aspect_entries_raw": 577,
+      "aspect_entries_dedup": 500
+    },
+    "restaurants_test": {
+      "sentences": 492,
+      "sentences_changed_by_detok": 490,
+      "aspect_entries_raw": 994,
+      "aspect_entries_dedup": 848
+    }
+  },
+  "train_sentences_removed_duplicates_or_leakage": 10,
+  "no_aspect": {
+    "laptops_train": {
+      "requested": 225,
+      "added": 225,
+      "pool": 1548
+    },
+    "laptops_dev": {
+      "requested": 55,
+      "added": 55,
+      "pool": 1548
+    },
+    "laptops_test": {
+      "requested": 82,
+      "added": 82,
+      "pool": 1548
+    },
+    "restaurants_train": {
+      "requested": 316,
+      "added": 316,
+      "pool": 1012
+    },
+    "restaurants_dev": {
+      "requested": 78,
+      "added": 78,
+      "pool": 1012
+    },
+    "restaurants_test": {
+      "requested": 123,
+      "added": 123,
+      "pool": 1012
+    }
+  },
+  "splits": {
+    "train": {
+      "sentences": 2703,
+      "aspects": 3300,
+      "sentiments": {
+        "positive": 2145,
+        "negative": 880,
+        "neutral": 275
+      },
+      "no_aspect_sentences": 541,
+      "no_aspect_share": 0.2001
+    },
+    "dev": {
+      "sentences": 662,
+      "aspects": 794,
+      "sentiments": {
+        "positive": 489,
+        "negative": 222,
+        "neutral": 83
+      },
+      "no_aspect_sentences": 133,
+      "no_aspect_share": 0.2009
+    },
+    "test": {
+      "sentences": 1025,
+      "aspects": 1311,
+      "sentiments": {
+        "positive": 953,
+        "negative": 241,
+        "neutral": 117
+      },
+      "no_aspect_sentences": 205,
+      "no_aspect_share": 0.2
+    }
+  }
+}

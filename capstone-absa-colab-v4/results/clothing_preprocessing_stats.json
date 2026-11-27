@@ -1,0 +1,8 @@
+{
+  "raw_reviews": 5000,
+  "identifier_fields_found_and_dropped": [],
+  "after_cleaning_dedup": 5000,
+  "sentences_total": 25206,
+  "sentences_per_review_mean": 5.04,
+  "sentence_length_words_mean": 11.63
+}

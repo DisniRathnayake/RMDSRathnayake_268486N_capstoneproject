@@ -1,0 +1,686 @@
+{
+ "_note": "Canonical aspect categories for the clothing evaluation. The category inventory follows the vocabulary of the gold labels; surface forms are general clothing/product vocabulary. aspect_terms map an extracted ASPECT phrase; opinion_terms map the extracted REASON (opinion words) and are only used when the aspect is a generic/product word (dress, shoes, it). Matching is on singularised tokens. Anything not listed keeps its own singularised phrase as category. Edit freely; rerun src.eval_clothing.",
+ "categories": {
+  "fit": {
+   "aspect_terms": [
+    "fit",
+    "fitting",
+    "fitted",
+    "fitment"
+   ],
+   "opinion_terms": [
+    "fit",
+    "fits",
+    "fitting",
+    "fitted",
+    "tight",
+    "too tight",
+    "loose",
+    "too loose",
+    "snug",
+    "baggy",
+    "roomy",
+    "form fitting",
+    "fit well",
+    "fits well",
+    "fit perfectly",
+    "fits perfectly",
+    "fits great"
+   ]
+  },
+  "size": {
+   "aspect_terms": [
+    "size",
+    "sizing",
+    "sized"
+   ],
+   "opinion_terms": [
+    "runs small",
+    "runs large",
+    "runs big",
+    "runs true to size",
+    "true to size",
+    "too small",
+    "too big",
+    "too large",
+    "size up",
+    "size down",
+    "oversized",
+    "undersized",
+    "runs a size"
+   ]
+  },
+  "comfort": {
+   "aspect_terms": [
+    "comfort",
+    "comfortable",
+    "comfy",
+    "comfortableness"
+   ],
+   "opinion_terms": [
+    "comfort",
+    "comfortable",
+    "uncomfortable",
+    "comfy",
+    "cozy",
+    "cosy",
+    "painful",
+    "hurts",
+    "hurt",
+    "pinch",
+    "pinches",
+    "chafe",
+    "chafing",
+    "blister",
+    "blisters"
+   ]
+  },
+  "style": {
+   "aspect_terms": [
+    "style",
+    "styling",
+    "stylish",
+    "appearance",
+    "look",
+    "looks",
+    "design",
+    "aesthetic",
+    "aesthetics",
+    "fashion",
+    "looking"
+   ],
+   "opinion_terms": [
+    "stylish",
+    "fashionable",
+    "trendy",
+    "cute",
+    "chic",
+    "sleek",
+    "gorgeous",
+    "beautiful",
+    "ugly",
+    "attractive",
+    "elegant",
+    "looks great",
+    "looks good",
+    "look good",
+    "look great",
+    "looks nice",
+    "look nice",
+    "good looking",
+    "nice looking",
+    "looks cheap",
+    "looks like"
+   ]
+  },
+  "quality": {
+   "aspect_terms": [
+    "quality",
+    "craftsmanship",
+    "workmanship",
+    "construction",
+    "build",
+    "build quality"
+   ],
+   "opinion_terms": [
+    "quality",
+    "well made",
+    "well built",
+    "poorly made",
+    "poorly built",
+    "cheaply made",
+    "shoddy",
+    "flimsy",
+    "junk",
+    "good quality",
+    "great quality",
+    "high quality",
+    "low quality",
+    "poor quality",
+    "excellent quality"
+   ]
+  },
+  "durability": {
+   "aspect_terms": [
+    "durability",
+    "durable",
+    "sturdiness",
+    "sturdy",
+    "longevity",
+    "lifespan",
+    "wear",
+    "wear and tear"
+   ],
+   "opinion_terms": [
+    "durable",
+    "sturdy",
+    "long lasting",
+    "holds up",
+    "hold up",
+    "held up",
+    "fell apart",
+    "fall apart",
+    "falling apart",
+    "wore out",
+    "wear out",
+    "lasted",
+    "lasts",
+    "last",
+    "broke",
+    "break",
+    "broken"
+   ]
+  },
+  "material": {
+   "aspect_terms": [
+    "material",
+    "fabric",
+    "cloth",
+    "textile",
+    "fabric quality",
+    "material quality",
+    "leather",
+    "cotton",
+    "polyester",
+    "wool",
+    "nylon",
+    "linen",
+    "silk",
+    "denim",
+    "rubber",
+    "plastic",
+    "metal",
+    "fleece",
+    "spandex",
+    "suede",
+    "canvas"
+   ],
+   "opinion_terms": [
+    "fabric",
+    "material"
+   ]
+  },
+  "color": {
+   "aspect_terms": [
+    "color",
+    "colour",
+    "shade",
+    "hue",
+    "tint"
+   ],
+   "opinion_terms": [
+    "true to color",
+    "vibrant",
+    "faded",
+    "fading",
+    "fade"
+   ]
+  },
+  "price": {
+   "aspect_terms": [
+    "price",
+    "pricing",
+    "cost",
+    "value",
+    "worth",
+    "money",
+    "bargain",
+    "deal",
+    "value for money"
+   ],
+   "opinion_terms": [
+    "expensive",
+    "overpriced",
+    "pricey",
+    "affordable",
+    "inexpensive",
+    "good value",
+    "great value",
+    "worth it",
+    "worth the money",
+    "worth every penny",
+    "bargain",
+    "steal"
+   ]
+  },
+  "length": {
+   "aspect_terms": [
+    "length"
+   ],
+   "opinion_terms": [
+    "too short",
+    "too long",
+    "long enough",
+    "short enough",
+    "runs short"
+   ]
+  },
+  "stretch": {
+   "aspect_terms": [
+    "stretch",
+    "stretchy",
+    "stretchiness",
+    "elastic",
+    "elasticity",
+    "stretchability"
+   ],
+   "opinion_terms": [
+    "stretchy",
+    "stretch",
+    "stretches",
+    "stretched out",
+    "no stretch",
+    "stretchable",
+    "elastic"
+   ]
+  },
+  "breathability": {
+   "aspect_terms": [
+    "breathability",
+    "breathable",
+    "ventilation",
+    "airflow",
+    "air flow"
+   ],
+   "opinion_terms": [
+    "breathable",
+    "breathes",
+    "breathes well",
+    "ventilated",
+    "air flow",
+    "airflow",
+    "sweaty",
+    "sweat"
+   ]
+  },
+  "thickness": {
+   "aspect_terms": [
+    "thickness",
+    "thick",
+    "thin",
+    "thinness"
+   ],
+   "opinion_terms": [
+    "thick",
+    "thin",
+    "thinness",
+    "paper thin",
+    "too thin",
+    "too thick"
+   ]
+  },
+  "weight": {
+   "aspect_terms": [
+    "weight",
+    "heaviness"
+   ],
+   "opinion_terms": [
+    "heavy",
+    "heavier",
+    "lightweight",
+    "light weight",
+    "feels light",
+    "very light"
+   ]
+  },
+  "warmth": {
+   "aspect_terms": [
+    "warmth",
+    "insulation",
+    "warm"
+   ],
+   "opinion_terms": [
+    "warm",
+    "warmer",
+    "keeps me warm",
+    "keeps warm",
+    "insulated"
+   ]
+  },
+  "usability": {
+   "aspect_terms": [
+    "ease of use",
+    "usability",
+    "easy to use",
+    "user friendly",
+    "ease of wear"
+   ],
+   "opinion_terms": [
+    "easy to use",
+    "user friendly",
+    "easy to put on",
+    "easy to take off",
+    "easy to wear",
+    "hard to use",
+    "difficult to use",
+    "easy on",
+    "easy off"
+   ]
+  },
+  "functionality": {
+   "aspect_terms": [
+    "functionality",
+    "function",
+    "functional",
+    "usefulness",
+    "useful",
+    "versatility"
+   ],
+   "opinion_terms": [
+    "functional",
+    "useful",
+    "versatile",
+    "works well",
+    "work well",
+    "works great",
+    "does not work",
+    "doesn t work",
+    "stopped working"
+   ]
+  },
+  "shrinkage": {
+   "aspect_terms": [
+    "shrinkage",
+    "shrink",
+    "shrinking"
+   ],
+   "opinion_terms": [
+    "shrunk",
+    "shrinks",
+    "shrank",
+    "shrink",
+    "shrinking"
+   ]
+  },
+  "packaging": {
+   "aspect_terms": [
+    "packaging",
+    "package",
+    "packing"
+   ],
+   "opinion_terms": [
+    "packaged",
+    "packaging"
+   ]
+  },
+  "odor": {
+   "aspect_terms": [
+    "odor",
+    "odour",
+    "smell",
+    "scent",
+    "fragrance",
+    "odor resistance"
+   ],
+   "opinion_terms": [
+    "smells",
+    "smelly",
+    "stinks",
+    "stink",
+    "stinky",
+    "smell bad",
+    "chemical smell",
+    "odor",
+    "smell"
+   ]
+  },
+  "support": {
+   "aspect_terms": [
+    "support",
+    "supportive",
+    "arch support"
+   ],
+   "opinion_terms": [
+    "supportive",
+    "supports",
+    "support"
+   ]
+  },
+  "cushioning": {
+   "aspect_terms": [
+    "cushioning",
+    "cushion",
+    "padding",
+    "padded",
+    "pad"
+   ],
+   "opinion_terms": [
+    "cushioned",
+    "padded",
+    "well cushioned",
+    "cushioning"
+   ]
+  },
+  "authenticity": {
+   "aspect_terms": [
+    "authenticity",
+    "authentic",
+    "genuine",
+    "realism"
+   ],
+   "opinion_terms": [
+    "fake",
+    "counterfeit",
+    "knockoff",
+    "knock off",
+    "not authentic",
+    "not genuine",
+    "authentic",
+    "genuine"
+   ]
+  },
+  "opacity": {
+   "aspect_terms": [
+    "opacity",
+    "opaque",
+    "sheerness",
+    "sheer",
+    "transparency"
+   ],
+   "opinion_terms": [
+    "see through",
+    "sheer",
+    "transparent",
+    "opaque"
+   ]
+  },
+  "care": {
+   "aspect_terms": [
+    "care",
+    "washability",
+    "washing",
+    "laundry",
+    "wash"
+   ],
+   "opinion_terms": [
+    "machine washable",
+    "machine wash",
+    "hand wash",
+    "washes well",
+    "washed well",
+    "washable",
+    "dry clean"
+   ]
+  },
+  "wrinkles": {
+   "aspect_terms": [
+    "wrinkles",
+    "wrinkling",
+    "wrinkle",
+    "crease",
+    "creasing",
+    "ironing"
+   ],
+   "opinion_terms": [
+    "wrinkly",
+    "wrinkled",
+    "creased",
+    "wrinkle free",
+    "wrinkle resistant"
+   ]
+  },
+  "stitching": {
+   "aspect_terms": [
+    "stitching",
+    "stitch",
+    "seam",
+    "thread",
+    "stitches"
+   ],
+   "opinion_terms": [
+    "poorly stitched",
+    "well stitched",
+    "coming apart at the seams",
+    "unraveled",
+    "unraveling",
+    "fraying",
+    "frayed",
+    "stitched"
+   ]
+  },
+  "pattern": {
+   "aspect_terms": [
+    "pattern",
+    "print"
+   ],
+   "opinion_terms": []
+  },
+  "adjustability": {
+   "aspect_terms": [
+    "adjustability",
+    "adjustable"
+   ],
+   "opinion_terms": [
+    "adjustable",
+    "easy to adjust",
+    "adjusts",
+    "adjusted"
+   ]
+  },
+  "shape": {
+   "aspect_terms": [
+    "shape",
+    "shape retention"
+   ],
+   "opinion_terms": [
+    "holds its shape",
+    "keeps its shape",
+    "lost its shape",
+    "out of shape",
+    "misshapen"
+   ]
+  },
+  "traction": {
+   "aspect_terms": [
+    "traction",
+    "grip",
+    "slip resistance"
+   ],
+   "opinion_terms": [
+    "slippery",
+    "non slip",
+    "slip resistant",
+    "slips",
+    "slipping"
+   ]
+  },
+  "zipper": {
+   "aspect_terms": [
+    "zipper",
+    "zip"
+   ],
+   "opinion_terms": [
+    "zipper",
+    "zip",
+    "zipped"
+   ]
+  },
+  "customer service": {
+   "aspect_terms": [
+    "customer service",
+    "service",
+    "seller"
+   ],
+   "opinion_terms": []
+  }
+ },
+ "generic_terms": [
+  "dress",
+  "shirt",
+  "blouse",
+  "top",
+  "tee",
+  "t shirt",
+  "tshirt",
+  "sweater",
+  "hoodie",
+  "jacket",
+  "coat",
+  "vest",
+  "pant",
+  "pants",
+  "jean",
+  "legging",
+  "skirt",
+  "shoe",
+  "boot",
+  "sandal",
+  "sneaker",
+  "slipper",
+  "sock",
+  "hat",
+  "glove",
+  "scarf",
+  "belt",
+  "bra",
+  "underwear",
+  "bag",
+  "purse",
+  "wallet",
+  "watch",
+  "ring",
+  "necklace",
+  "bracelet",
+  "earring",
+  "jewelry",
+  "product",
+  "item",
+  "thing",
+  "one",
+  "pair",
+  "purchase",
+  "order",
+  "piece",
+  "it",
+  "they",
+  "them",
+  "these",
+  "those",
+  "this",
+  "that",
+  "he",
+  "she",
+  "we",
+  "i",
+  "you",
+  "something",
+  "everything",
+  "anything"
+ ],
+ "determiners": [
+  "the",
+  "a",
+  "an",
+  "this",
+  "that",
+  "these",
+  "those",
+  "my",
+  "your",
+  "its",
+  "their",
+  "our",
+  "his",
+  "her"
+ ]
+}

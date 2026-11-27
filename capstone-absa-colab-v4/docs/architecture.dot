@@ -1,0 +1,23 @@
+digraph G {
+  rankdir=LR; fontname="Helvetica"; node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, fillcolor="#eef3fb", color="#4a6fa5"]; edge [color="#4a6fa5"];
+  subgraph cluster_data { label="Data"; style=dashed; color="#999999";
+    src [label="Source domains\nSemEval-2014 laptops + restaurants\n(ASTE-V2 train/dev/test)"];
+    tgt [label="Target domain (eval only)\nClothing reviews\n(Amazon Reviews 2023 sample)"];
+    gold [label="Clothing gold set\n~200-300 annotated reviews"]; }
+  pre [label="Preprocessing\nclean, dedupe,\nsentence split"];
+  subgraph cluster_ext { label="Extraction (aspect, sentiment, reason)"; style=dashed; color="#999999";
+    base [label="Baseline\nspaCy + VADER lexicon\nTF-IDF + LR"];
+    pro  [label="Prompted LLM\nfew-shot, 4-bit local"];
+    ft   [label="Fine-tuned LLM\nQLoRA adapter"]; }
+  val [label="JSON schema + span check\none retry, failures logged"];
+  norm [label="Cross-domain layer (weeks 9-11)\nbi-encoder aspect normalisation\n+ SetFit sentiment", fillcolor="#fdf1dc", color="#c08a2b", style="rounded,filled,dashed"];
+  agg [label="Aggregation\nnet sentiment per aspect"];
+  rep [label="Per-aspect report\nnotebook / Streamlit"];
+  ev [label="Evaluation\naspect F1, pair F1, JSON validity,\ncross-domain drop, bootstrap CI", fillcolor="#e8f4ea", color="#4f8a5b"];
+  src -> pre; tgt -> pre; gold -> ev;
+  pre -> base; pre -> pro; pre -> ft;
+  pro -> val; ft -> val;
+  base -> norm; val -> norm; norm -> agg; agg -> rep;
+  base -> ev; val -> ev; norm -> ev [style=dashed];
+  src -> ft [label="train (QLoRA)", style=dotted, fontsize=9];
+}

@@ -1,0 +1,20 @@
+# Core (all non-GPU steps)
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+spacy>=3.7
+vaderSentiment>=3.3.2
+nbformat
+nbconvert
+streamlit
+ipykernel
+# spaCy model (install separately):  python -m spacy download en_core_web_sm
+
+# LLM steps (GPU, 4-bit local models; no external LLM APIs)
+torch
+transformers>=4.44
+peft>=0.12
+bitsandbytes>=0.43
+accelerate>=0.33
+datasets>=2.20

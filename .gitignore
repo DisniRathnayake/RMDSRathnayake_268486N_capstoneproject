@@ -1,0 +1,91 @@
+# ---------------------------------------------------------------
+# Single .gitignore for the whole repo.
+# ---------------------------------------------------------------
+
+# --- Data: raw review text must not be published (scraping/terms
+#     compliance). Scripts, review IDs and labels only.
+#     Recreate the sample with: python scripts/fetch_data.py amazon --n 5000
+**/data/raw/*
+!**/data/raw/.gitkeep
+amazon_clothing_sample.jsonl
+**/data/processed/clothing_*.jsonl
+# Annotation sheets contain review text; gold_labels.jsonl (IDs + labels) is committed
+**/data/annotation/batch*.csv
+# Official SemEval-2014 gold test XML, downloaded by scripts/fetch_data.py semeval-gold
+semeval_gold/
+
+# --- Model artefacts: too large for git (GitHub hard limit 100 MB/file).
+#     Publish adapters on the Hugging Face Hub or as a GitHub Release asset.
+*.zip
+*.tar
+*.tar.gz
+*.7z
+adapters/
+absa-qlora*/
+checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# --- Local copies downloaded from Colab / Drive
+# Duplicate of capstone-absa-colab-v4/results/
+/capstone-absa-colab-v4-results/
+# Executed Colab notebook: its outputs print raw Amazon review text,
+# and every metric it produced is already saved in results/.
+/colab_run_v4.ipynb
+
+# --- Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+kaggle.json
+client_secret*.json
+credentials*.json
+token*.json
+
+# --- Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Jupyter / Streamlit
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+
+# --- Experiment tracking and training logs
+wandb/
+mlruns/
+runs/
+lightning_logs/
+outputs/
+*.log
+
+# --- Hugging Face local caches
+.cache/
+hf_cache/
+
+# --- Editors / OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
